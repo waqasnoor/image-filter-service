@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "7c635a69-9eed-4f8f-b877-77171c11b526",
+		"name": "cloud-cdnd-c2-final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{JWT_TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{HOST}}/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg",
+					"protocol": "http",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "12c90c95-9bbf-4e3c-a1ca-68ec0f50bf14",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "986b33fa-d645-4b4e-a7ca-cf5f8488c63d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6754c5af-1953-4af4-b326-5e306f7a689a",
+			"key": "HOST",
+			"value": "localhost:8082"
+		},
+		{
+			"id": "6f81c5ea-6d4e-4571-9593-8d16785172ae",
+			"key": "JWT_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbGxvQGdtYWlsLmNvbSIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTAkQUJZclBtbVFicTNIV1h6VHREWVlVT1hkWlhyRTJWSTV0aGh3V3JnVkhOWU13UFV5cDl0emkiLCJjcmVhdGVkQXQiOiIyMDIwLTEyLTA2VDA4OjMxOjE2LjE5M1oiLCJ1cGRhdGVkQXQiOiIyMDIwLTEyLTA2VDA4OjMxOjE2LjE5NFoiLCJpYXQiOjE2MDcyNDM4NDd9.edvv4bvttCLF1npP0SnN2D2vuP-xyTmNmdTEYoWHKOs"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
