@@ -1,14 +1,6 @@
-# Udagram Image Filtering Microservice
+# Udagram Image Filtering Microservice | React Nano Degree project
 
-Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
-
-The project is split into three parts:
-1. [The Simple Frontend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-frontend)
-A basic Ionic client web application which consumes the RestAPI Backend. [Covered in the course]
-2. [The RestAPI Backend](https://github.com/udacity/cloud-developer/tree/master/course-02/exercises/udacity-c2-restapi), a Node-Express server which can be deployed to a cloud service. [Covered in the course]
-3. [The Image Filtering Microservice](https://github.com/udacity/cloud-developer/tree/master/course-02/project/image-filter-starter-code), the final project for the course. It is a Node-Express application which runs a simple script to process images. [Your assignment]
-
-## Tasks
+## Getting Started
 
 ### Setup Node Environment
 
@@ -17,32 +9,23 @@ You'll need to create a new node server. Open a new terminal within the project 
 1. Initialize a new project: `npm i`
 2. run the development server with `npm run dev`
 
-### Create a new endpoint in the server.ts file
+### Task Check List
 
-The starter code has a task for you to complete an endpoint in `./src/server.ts` which uses query parameter to download an image from a public URL, filter the image, and return the result.
+1. Added api `filteredimage` :heavy_check_mark:
+2. Added JWT Token Support :heavy_check_mark:
+3. Pushed to Github :heavy_check_mark:
+4. Deployed to `AWS Elastic Beanstalk` :heavy_check_mark:
 
-We've included a few helper functions to handle some of these concepts and we're importing it for you at the top of the `./src/server.ts`  file.
+### How to test
 
-```typescript
-import {filterImageFromURL, deleteLocalFiles} from './util/util';
-```
+Please import `cloud-cdnd-c2-final.postman_collection.json` to your postman. I have added a valid Auth Token in environment config.
 
-### Deploying your system
+### Deployed System
 
-Follow the process described in the course to `eb init` a new application and `eb create` a new environment to deploy your image-filter service! Don't forget you can use `eb deploy` to push changes.
+This system is deployed to aws using `elasticbeanstalk` cli.
+I initialized with `eb init`. Then i created new environment using `eb create`. After updating filter service i updated the deployed app using `ep deploy`.
+[image-filter-service-dev.us-east-2.elasticbeanstalk.com](image-filter-service-dev.us-east-2.elasticbeanstalk.com)
 
-## Stand Out (Optional)
+#### Envirnoment Screenshot
 
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+![Screenshot](./deployment_screenshots/Deployment_Screenshot.png)
