@@ -24,8 +24,11 @@ Please import `cloud-cdnd-c2-final.postman_collection.json` to your postman. I h
 
 This system is deployed to aws using `elasticbeanstalk` cli.
 I initialized with `eb init`. Then i created new environment using `eb create`. After updating filter service i updated the deployed app using `ep deploy`.
-[image-filter-service-dev.us-east-2.elasticbeanstalk.com](image-filter-service-dev.us-east-2.elasticbeanstalk.com)
 
-#### Envirnoment Screenshot
+### Envirnoment Screenshot
 
 ![Screenshot](./deployment_screenshots/Deployment_Screenshot.png)
+
+### Demo Site
+
+[image-filter-service-dev.us-east-2.elasticbeanstalk.com](image-filter-service-dev.us-east-2.elasticbeanstalk.com)
